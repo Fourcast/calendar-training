@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by nielsbuekers on 04/02/2017.
+ * Created by nielsbuekers
  */
 public class GoogleCalendarService  extends AbstractGoogleService{
   private static Calendar service;

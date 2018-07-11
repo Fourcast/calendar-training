@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 /**
- * Created by nbuekers on 07/03/16.
+ * Created by nbuekers
  */
 public class CalendarSample {
 
@@ -19,12 +19,15 @@ public class CalendarSample {
     CalendarManager mgr = new CalendarManager();
     
 
-    String user = "demo@fourcast.io";
+    String user = "robin.hellemans@fourcast.io";
     
     List<Event> events = mgr.getTodayEventsForUser(user);
     if(events.size() == 0) {
       log.severe("no events for " + user);
       return;
+    }
+    for(Event e :events){
+        log.info("found event named " + e.getSummary() + " at " + e.getStart().getDateTime());
     }
   }
 }

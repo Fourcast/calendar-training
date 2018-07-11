@@ -10,7 +10,7 @@ import java.io.InputStream;
 import java.util.List;
 
 /**
- * Created by nielsbuekers on 04/02/2017.
+ * Created by nielsbuekers
  */
 public class AbstractGoogleService {
   protected static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();

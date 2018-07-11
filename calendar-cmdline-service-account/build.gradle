@@ -3,12 +3,15 @@ group = 'io.fourcast.calendar'
 version = '0.1'
 apply plugin: 'java'
 apply plugin: 'maven'
+apply plugin: 'application'
+
+mainClassName = "io.fourcast.calendar.CalendarSample"
+
 
 repositories {
   mavenCentral()
 }
 
 dependencies {
-    compile group: 'joda-time', name: 'joda-time', version: '2.9.4'
     compile 'com.google.apis:google-api-services-calendar:v3-rev230-1.22.0'
 }

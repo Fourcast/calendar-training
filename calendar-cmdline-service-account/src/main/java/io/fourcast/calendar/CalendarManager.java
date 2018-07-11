@@ -11,7 +11,7 @@ import java.io.InputStream;
 import java.util.List;
 
 /**
- * Created by nielsbuekers on 03/02/2017.
+ * Created by nielsbuekers
  */
 public class CalendarManager {
 
