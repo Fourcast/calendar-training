@@ -16,7 +16,7 @@ import java.util.List;
 public class CalendarManager {
 
 
-  public List<Event> getTodayEventsForUser(String user) throws IOException {
+  public List<Event> getEventsForUser(String user) throws IOException {
     Calendar service = GoogleCalendarService.getCalendarService(getInputStreamForKey(),user);
     Events events = service.events().list("primary").setMaxResults(10)
       .setTimeMin(new DateTime(System.currentTimeMillis()))
@@ -27,6 +27,6 @@ public class CalendarManager {
   }
 
   private InputStream getInputStreamForKey() {
-    return this.getClass().getResourceAsStream("/pega88-sandbox-6ad3550d07c9.json");
+    return this.getClass().getResourceAsStream("/service-account.json");
   }
 }

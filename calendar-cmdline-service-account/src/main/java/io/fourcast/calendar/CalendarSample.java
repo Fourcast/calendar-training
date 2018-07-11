@@ -21,7 +21,7 @@ public class CalendarSample {
 
     String user = "robin.hellemans@fourcast.io";
     
-    List<Event> events = mgr.getTodayEventsForUser(user);
+    List<Event> events = mgr.getEventsForUser(user);
     if(events.size() == 0) {
       log.severe("no events for " + user);
       return;
