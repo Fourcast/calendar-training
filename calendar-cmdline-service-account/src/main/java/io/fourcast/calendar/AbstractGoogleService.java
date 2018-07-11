@@ -13,30 +13,23 @@ import java.util.List;
  * Created by nielsbuekers
  */
 public class AbstractGoogleService {
-  protected static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
-  protected static final JsonFactory JSON_FACTORY = new JacksonFactory();
+    protected static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
+    protected static final JsonFactory JSON_FACTORY = new JacksonFactory();
 
 
-  protected static GoogleCredential getCredentialsForScope(InputStream in, List<String> scope, String user) throws Exception {
+    protected static GoogleCredential getCredentialsForScope(InputStream in, List<String> scope, String user) throws Exception {
 
-    GoogleCredential credentials = GoogleCredential.fromStream(in, HTTP_TRANSPORT, JSON_FACTORY);
-    credentials = credentials.createScoped(scope);
+        GoogleCredential credentials = GoogleCredential.fromStream(in, HTTP_TRANSPORT, JSON_FACTORY);
+        credentials = credentials.createScoped(scope);
 
-    if (user!=null) {
-      credentials = createWithUser(credentials,user);
+        return new GoogleCredential.Builder()
+                .setTransport(credentials.getTransport())
+                .setJsonFactory(credentials.getJsonFactory())
+
+                //finish setup of credential with Service Account Id, Scopes, Private Key and Private Key Id. Impersonate user.
+
+                .build();
+
     }
 
-    return credentials;
-  }
-
-  private static GoogleCredential createWithUser(GoogleCredential credentials, String user) {
-
-    return new GoogleCredential.Builder()
-      .setTransport(credentials.getTransport())
-      .setJsonFactory(credentials.getJsonFactory())
-
-            //finish setup of credential with Service Account Id, Scopes, Private Key and Private Key Id. Impersonate user.
-
-      .build();
-  }
 }
