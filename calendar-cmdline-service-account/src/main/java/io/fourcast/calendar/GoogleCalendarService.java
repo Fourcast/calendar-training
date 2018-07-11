@@ -17,7 +17,7 @@ public class GoogleCalendarService  extends AbstractGoogleService{
   public static Calendar getCalendarService(InputStream in, String user) {
     if (service == null) {
       List<String> scope = new ArrayList<>();
-      scope.add(CalendarScopes.CALENDAR_READONLY);
+      scope.add(...); //define scope
 
       GoogleCredential credentials;
       try {
