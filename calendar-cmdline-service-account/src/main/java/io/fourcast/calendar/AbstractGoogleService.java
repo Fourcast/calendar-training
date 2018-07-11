@@ -30,7 +30,6 @@ public class AbstractGoogleService {
   }
 
   private static GoogleCredential createWithUser(GoogleCredential credentials, String user) {
-    String a = "niels@fourcast.io";
 
     return new GoogleCredential.Builder()
       .setTransport(credentials.getTransport())
