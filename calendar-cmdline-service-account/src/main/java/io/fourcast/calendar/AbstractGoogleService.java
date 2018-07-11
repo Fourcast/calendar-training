@@ -30,16 +30,13 @@ public class AbstractGoogleService {
   }
 
   private static GoogleCredential createWithUser(GoogleCredential credentials, String user) {
-    String a = "niels@fourcast.io";
 
     return new GoogleCredential.Builder()
       .setTransport(credentials.getTransport())
       .setJsonFactory(credentials.getJsonFactory())
-      .setServiceAccountId(credentials.getServiceAccountId())
-      .setServiceAccountScopes(credentials.getServiceAccountScopes())
-      .setServiceAccountPrivateKey(credentials.getServiceAccountPrivateKey())
-      .setServiceAccountPrivateKeyId(credentials.getServiceAccountPrivateKeyId())
-      .setServiceAccountUser(user)
+
+            //finish setup of credential with Service Account Id, Scopes, Private Key and Private Key Id. Impersonate user.
+
       .build();
   }
 }

@@ -13,5 +13,5 @@ repositories {
 }
 
 dependencies {
-    compile 'com.google.apis:google-api-services-calendar:v3-rev230-1.22.0'
+    //add dependencies
 }
