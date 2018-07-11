@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/calendar-cmdline-service-account.iml" filepath="$PROJECT_DIR$/calendar-cmdline-service-account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/calendar-cmdline-service-account_main.iml" filepath="$PROJECT_DIR$/.idea/modules/calendar-cmdline-service-account_main.iml" group="calendar-cmdline-service-account" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/calendar-cmdline-service-account_test.iml" filepath="$PROJECT_DIR$/.idea/modules/calendar-cmdline-service-account_test.iml" group="calendar-cmdline-service-account" />
+    </modules>
+  </component>
+</project>
